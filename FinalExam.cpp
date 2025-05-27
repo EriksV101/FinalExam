@@ -77,4 +77,5 @@ double sumpos(double m[])
 			sum += m[i];
 		i++;
 	}
+	return sum;
 }
