@@ -1,5 +1,10 @@
 /**
+* Filename: FinalExam
 * 
+* program stores data in a matrix and calcultes the sum of poisitive values
+* and all elements with the value 1.0
+* 
+* Made By: Eriks Vanags
 */
 #include <iostream>
 using namespace std;
@@ -12,12 +17,13 @@ double sumpos(double m[]); // sums all positive numbers in an array
 int main()
 {
 	double matrix[X][Y], num, sum = 0;
-	int choice, i = 0, j = 0;
+	int choice, i = 0, j = 0, numof1 = 0;
 
 	do
 	{
 		cout << "1) Enter data in matrix (range -2.5 to 2.5)" << endl;
 		cout << "2) Sum of all positive numbers" << endl;
+		cout << "3) find number of 1's in matrix" << endl;
 		cout << "0) Exit" << endl;
 		cin >> choice;
 
@@ -52,6 +58,18 @@ int main()
 				i++;
 			}
 			cout << "The sum of all positive numbers in the matrix is " << sum << endl;
+		}
+		else if (choice == 3)
+		{
+			for (j = 0; j < X; j++)
+			{
+				for (i = 0; i < Y; i++)
+				{
+					if (matrix[j][i] == 1.0)
+						numof1++;
+				}
+			}
+			cout << "the number of 1.0 found in the matrix is " << numof1 << endl;
 		}
 		else if (choice == 0)
 			;
