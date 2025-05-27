@@ -5,7 +5,7 @@
 #include <cassert>
 using namespace std;
 
-const int X = 2, Y = 2;
+const int X = 4, Y = 3;
 
 void adddata(double m[], double n); 
 double sumpos(double m[]); // sums all positive numbers in an array
