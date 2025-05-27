@@ -2,6 +2,7 @@
 * 
 */
 #include <iostream>
+#include <cassert>
 using namespace std;
 
 const int X = 2, Y = 2;
@@ -31,6 +32,7 @@ int main()
 				cin >> num;
 				if (num >= -2.5 and num <= 2.5) // checks if in range
 				{
+					assert(j < Y and i < X); // avoids out of bounds writing
 					matrix[j][i] = num;
 					j++;
 					if (j == X)
