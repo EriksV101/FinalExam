@@ -4,10 +4,10 @@
 #include <iostream>
 using namespace std;
 
-const int X = 4, Y = 3;
+const int X = 2, Y = 2;
 
-void adddata(double m[], double n);
-double sumpos(double m[]);
+void adddata(double m[], double n); 
+double sumpos(double m[]); // sums all positive numbers in an array
 
 int main()
 {
@@ -23,11 +23,13 @@ int main()
 
 		if (choice == 1)
 		{
+			i = 0; // initialises values again incase user wants to rewrite the matrix
+			j = 0;
 			cout << "enter a number between -2.5 and 2.5" << endl;
-			while (i < Y)
+			while (i < Y) // first adds number to every X element then moves onto the next level
 			{
 				cin >> num;
-				if (num >= -2.5 and num <= 2.5)
+				if (num >= -2.5 and num <= 2.5) // checks if in range
 				{
 					matrix[j][i] = num;
 					j++;
@@ -44,15 +46,10 @@ int main()
 		else if (choice == 2)
 		{
 			i = 0;
-			while (j < Y)
+			while (i < Y)
 			{
 				sum += sumpos(matrix[i]);
 				i++;
-				if (i == Y)
-				{
-					i = 0;
-
-				}
 			}
 			cout << "The sum of all positive numbers in the matrix is " << sum << endl;
 		}
